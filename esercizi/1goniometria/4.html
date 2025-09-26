@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+
+    <h3 class="yellow">Formule di duplicazione</h3>
+    <div class="esempi-container">
+        <b>Formula di duplicazione del seno</b>
+        <div class="formula">
+            \[
+            sin(2\,\color{red}{}\alpha\color{black}{}) =
+            2sin(\color{red}{}\alpha\color{black}{})\,cos(\color{red}{}\alpha\color{black}{})
+            \]
+        </div>
+
+        <br>
+
+        <b>Formula di duplicazione del coseno</b>
+        <div class="formula">
+            \[
+            \begin{align*}
+            cos(2\,\color{red}{}\alpha\color{black}{}) = \,\,&cos^2(\color{red}{}\alpha\color{black}{}) -
+            sin^2(\color{red}{}\alpha\color{black}{})
+            \\\\
+            = \,\,&1 - 2sin^2(\color{red}{}\alpha\color{black}{})
+            \\\\
+            = \,\,&2cos^2(\color{red}{}\alpha\color{black}{}) - 1
+            \end{align*}
+            \]
+        </div>
+
+        <br>
+
+        <b>Formula di duplicazione della tangente</b>
+        <div class="formula">
+            \[
+            tan(2\,\color{red}{}\alpha\color{black}{}) =
+            \dfrac{2tan(\color{red}{}\alpha\color{black}{})}{1 - tan^2(\color{red}{}\alpha\color{black}{})}
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Semplificare l'espressione
+        \[
+        \dfrac{sin(2\alpha) + cos(2\alpha) + sin^2(\alpha)}{cos(\alpha)} 
+        \]        
+
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">     
+            <b class="gray">Soluzione</b> 
+            <br>
+            Utilizzando le formule di duplicazione l'espressione si semplifica come segue
+            \[
+                2sin(\alpha) + cos(\alpha)
+            \]
+        </div>
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">     
+            <b class="gray">Svolgimento</b> 
+            <br>
+            <iframe style="width: 100%" src="https://www.youtube.com/embed/Yb8OB6Zg4zA?si=sItJejOBpHgblZ7h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Semplificare l'espressione
+        \[
+        \dfrac{sin(2\alpha)}{2cos(\alpha)} - sin\left(\dfrac{5}{3}\pi - \alpha\right)
+        \]                
+        <br>
+
+        <button id="hintAAAAAAA(3)-button" onclick="showHint(`AAAAAAA(3)`)">Soluzione</button>
+        <div id="hintAAAAAAA(3)" class="hint gray" style="display: none;">     
+            <b class="gray">Soluzione</b> 
+            <br>
+            Utilizzando le formule di duplicazione l'espressione si semplifica come segue
+            \[
+                \dfrac{\sqrt{3}\,cos(\alpha) + 3,sin(\alpha)}{2}
+            \]
+        </div>
+
+        <br>
+
+        <button id="hintAAAAAAA(4)-button" onclick="showHint(`AAAAAAA(4)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(4)" class="hint gray" style="display: none;">     
+            <b class="gray">Svolgimento</b> 
+            <br>
+            <iframe style="width: 100%" src="https://www.youtube.com/embed/gp_9KaKzgPg?si=vJaF1IgKO0ur7hl-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Semplificare l'espressione
+        \[
+        \left(1 - tan(\alpha)\right) \cdot tan(2\alpha) - tan\left(\alpha - \dfrac{5}{4}\pi\right)
+        \]                   
+        <br>
+
+        <button id="hintAAAAAAA(5)-button" onclick="showHint(`AAAAAAA(5)`)">Soluzione</button>
+        <div id="hintAAAAAAA(5)" class="hint gray" style="display: none;">     
+            <b class="gray">Soluzione</b> 
+            <br>
+            Utilizzando le formule di duplicazione l'espressione si semplifica ad \(1\).
+        </div>
+
+        <br>
+
+        <button id="hintAAAAAAA(6)-button" onclick="showHint(`AAAAAAA(6)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(6)" class="hint gray" style="display: none;">     
+            <b class="gray">Svolgimento</b> 
+            <br>
+            <iframe style="width: 100%" src="https://www.youtube.com/embed/YA8trBZCnCA?si=o0ERf0RATWAi1fwP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
