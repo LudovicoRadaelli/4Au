@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <h3 class="yellow">Formula dell'angolo aggiunto</h3>
+    <div class="esempi-container">
+
+        Vogliamo trasformare una funzione
+        della forma
+        \[
+        f(x) = a\,sin(x) + b\,cos(x)
+        \]
+        nella forma
+        \[
+        f(x) = r\,sin(x + \alpha)
+        \]
+        Le formule che ci consentono di farlo sono le <b>formule dell'angolo aggiunto</b>
+
+
+        <div class="grayBackground">
+            \begin{cases}
+            r = \sqrt{a^2 + b^2}
+            \\\\
+            sin\left(\alpha\right) = \dfrac{b}{r}
+            \\\\
+            cos\left(\alpha\right) = \dfrac{a}{r}            
+            \end{cases}
+        </div>
+
+        <br>
+        <br>
+
+        Nel seguente video viene spiegato come si derivano queste formule
+        <br>
+        <br>
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/vU3TCJk5hd0?si=fFwjEi_squAx5ygu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>        
+        <br>
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/MKmhaM9dtnY?si=KWxSq2vnpVmfMHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Applicare la formula dell'angolo aggiunto per trasformare
+        \[
+        f(x) = 5\sqrt{3}\,sin(x) - 5cos(x)
+        \]
+        nella forma \(f(x) = r \, sin(x + \alpha)\)
+
+        <br>
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            La funzione si può riscrivere come segue
+            \[
+            f(x) = 10 \, sin\left(x + \dfrac{11}{6}\pi\right)
+            \]
+        </div>
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">     
+            <b class="gray">Svolgimento</b> 
+            <br>
+            <iframe style="width: 100%" src="https://www.youtube.com/embed/GvZwMZt_bqs?si=NIzVNZ9ksRfSW_gF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Applicare la formula dell'angolo aggiunto per trasformare
+        \[
+        f(x) = 2\,sin(x) -2\,cos(x) 
+        \]
+        nella forma \(f(x) = r \, sin(x + \alpha) + c\).
+
+        <br>
+        <br>
+
+        <button id="hintAAAAAAA(3)-button" onclick="showHint(`AAAAAAA(3)`)">Soluzione</button>
+        <div id="hintAAAAAAA(3)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            La funzione si può riscrivere come segue
+            \[
+            f(x) = 2\sqrt{2} \, sin\left(x + \dfrac{3}{4}\pi\right) -7
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Semplificare la seguente espressione
+        \[
+            \sqrt{2}\,sin\left(x + \dfrac{5}{4}\right) + cos\left(x - \dfrac{\pi}{2}\right)
+        \]
+
+        <br>        
+
+        <button id="hintAAAAAAA(4)-button" onclick="showHint(`AAAAAAA(4)`)">Soluzione</button>
+        <div id="hintAAAAAAA(4)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            L'espressione si semplifica in \(-cos(x)\).
+            <br>
+            <br>
+            Prima di usare la formula di sottrazione per sviluppare \(cos\left(x - \dfrac{\pi}{2}\right)\)
+            andate a ripassare gli <b>archi associati</b>.
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
