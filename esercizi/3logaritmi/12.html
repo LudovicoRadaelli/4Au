@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Data la funzione \(f(x) = x^2 - 1\)
+        <br>
+        <br>
+        <ul>
+            <li>
+                scrivere la legge della funzione \(g\) il cui grafico è
+                compresso verticalmente di un fattore \(2\) rispetto a quello di \(f\).
+            </li>
+            <br>
+            <li>
+                scrivere la legge della funzione \(h\) il cui grafico è
+                traslato di \(1\) unità verso sinistra rispetto a quello di \(g\).
+            </li>
+            <br>
+            <li>
+                scrivere la legge della funzione \(p\) il cui grafico è
+                compresso orizzontalmente di \(2\) unità verso destra rispetto a quello di \(h\).
+            </li>
+            <br>
+            <br>
+            <li>
+                scrivere la legge della funzione \(q\) il cui grafico è
+                traslato di \(3\) unità verso il basso rispetto a quello di \(p\).
+            </li>
+        </ul>
+
+        <br>
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            <br>
+            <ul>
+                <li>
+                    \(g(x) = \dfrac{x^2 - 1}{2}\)
+                </li>
+                <br>
+                <li>
+                    \(h(x) = \dfrac{x^2-2x}{2}\)
+                </li>
+                <br>
+                <li>
+                    \(p(x) = 2x^2-2x\)
+                </li>
+                <br>
+                <li>
+                    \(q(x) = 2x^2-2x - 3\)
+                </li>
+            </ul>
+        </div>
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">
+            <b class="gray">Svolgimento</b>
+            <br>
+            <br>
+            Siccome il grafico di \(g\) è compresso verticalmente di un fattore
+            \(2\) rispetto a quello di \(f\) si ha
+            \[
+            g(x) = \dfrac{f(x)}{2} = \dfrac{x^2 - 1}{2}
+            \]
+            Il grafico di \(h\) è traslato di \(1\) unità verso sinistra rispetto a quello di \(h\), di conseguenza
+            \[
+            \begin{align*}
+            h(x) = g(x - 1)
+            &=\dfrac{(x - 1)^2 - 1}{2}
+            \\\\
+            &=\dfrac{x^2 + 1 -2x - 1}{2}
+            \\\\
+            &=\dfrac{x^2-2x}{2}
+            \end{align*}
+            \]
+
+            Abbiamo che il grafico di \(p\) grafico è
+            compresso orizzontalmente di \(2\) unità verso destra rispetto a quello di \(h\).
+            \[
+            \begin{align*}
+            p(x)
+            &= h(2x)
+            \\\\
+            &=\dfrac{(2x)^2-2(2x)}{2}
+            \\\\
+            &=\dfrac{4x^2-4x}{2}
+            \\\\
+            &=2x^2-2x
+            \end{align*}
+            \]
+            Infine il grafico di \(q\) è traslato di \(3\) unità verso il basso rispetto a quello di \(p\).
+            \[
+            q(x)
+            &= p(x) - 3
+            \\\\
+            &= 2x^2-2x - 3
+            \]
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        log_{2}^2(x) - log_{2}(x^3) - 4 = 0
+        \]
+
+        <div class="gray">
+            <b>Suggerimento</b>
+            <br>            
+            Applicate la regola \(log_{_b}(A^n) = n \, log_{_b}(A)\) al secondo addendo.
+        </div>
+
+        <br>
+
+        <button id="hintAAAAAAA(3)-button" onclick="showHint(`AAAAAAA(3)`)">Soluzione</button>
+        <div id="hintAAAAAAA(3)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>            
+            L'equazione è risolta per \(x = \dfrac{1}{2}\) e \(x = 16\).
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        2\,log_{_3}(x - 1) - log_{_3}(x + 11) = 1
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(4)-button" onclick="showHint(`AAAAAAA(4)`)">Soluzione</button>
+        <div id="hintAAAAAAA(4)" class="hint gray" style="display: none;">
+            <b>Soluzione:</b>
+            <br>
+            L'equazione è risolta per \(\,\,\, x = \dfrac{5 + 3\sqrt{17}}{2}\).
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Stabilire la legge della funzione logaritmica rappresentata nel grafico
+        <br>
+        <br>
+        <img src="img/12(3).png">
+
+        <br>
+
+        <button id="hintAAAAAAA(5)-button" onclick="showHint(`AAAAAAA(5)`)">Soluzione</button>
+        <div id="hintAAAAAAA(5)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>:
+            <br>
+            La funzione è definita dalla legge \(f(x) = log_{3}(x + \dfrac{3}{2}) - 2\)
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Rappresentare i grafici delle funzioni
+        \[
+        f(x) = log_{_4}(x + 2) - 1 \qquad g(x) = log_{_4}(x - 4) + 2
+        \]
+        Stabilire la coordinata \(x\) del punto di intersezione tra i grafici di \(f\) e \(g\).
+
+        <br>
+
+        <button id="hintAAAAAAA(6)-button" onclick="showHint(`AAAAAAA(6)`)">Soluzione</button>
+        <div id="hintAAAAAAA(6)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione:</b>
+            <br>
+            La coordinata \(x\) del punto di intersezione tra i grafici è \(x = \dfrac{258}{63}\).
+        </div>
+    </div>
+
+
+
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
