@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="yellow">Forme determinate</h3>
+    <div class="esempi-container">
+        Proviamo a risolvere il seguente limite per sostituzione
+        \[
+        \lim_{x \to 2^{+}} \dfrac{3x + 1}{x - 2} = \dfrac{3 \cdot 2 + 1}{2^{+} - 2} = \dfrac{7}{0^{+}} = +\infty
+        \]
+        Per scrivere l'ultima uguaglianza il ragionamento è stato il seguente: quante volte un numero positivo
+        vicinissimo a \(0\) è contenuto nel \(7\)?
+        Tantissime. Al limite, infinite.
+        In maniera analoga otteniamo sei diverse situazioni nelle quali il risultato è <b>determinato</b>.
+        Le elenco di seguito, analizzando per ciascuna il ragionamento che ci porta al risultato
+
+
+        <br>
+        <br>
+
+        <div id="slide-containeroMuNcolOoL" class="slide-container oMuNcolOoL grayBorder">
+            <div class="slideoMuNcolOoL">
+                \(\dfrac{L}{\infty} = 0\)
+                <br>
+                <br>
+                Cosa ottengo dividendo il numero \(L\) per un numero sempre più grande? Un numero piccolissimo, al
+                limite \(0\).
+            </div>
+            <div class="slideoMuNcolOoL">
+                \(\dfrac{0}{\infty} = 0\)
+                <br>
+                <br>
+                Che numero ottengo dividendo un numero sempre più vicino a \(0\) per un numero sempre più grande? Un
+                numero piccolissimo, al limite \(0\).
+            </div>
+            <div class="slideoMuNcolOoL">
+                \(\dfrac{0}{L} = 0\)
+                <br>
+                <br>
+                Che numero ottengo dividendo un numero sempre più vicino a \(0\) per un numero \(L\)? Un numero sempre
+                più piccolo, al limite \(0\).
+            </div>
+            <div class="slideoMuNcolOoL">
+                \(\dfrac{\infty}{L} = \infty\)
+                <br>
+                <br>
+                Quante volte un numero \(L\) è contenuto in un numero sempre più grande?
+                Tantissime. Al limite, infinite.
+            </div>
+            <div class="slideoMuNcolOoL">
+                \(\dfrac{\infty}{0} = \infty\)
+                <br>
+                <br>
+                Quante volte un numero positivo vicinissimo a \(0\) è contenuto in un numero sempre più grande?
+                Tantissime. Al limite, infinite.
+            </div>
+            <div class="slideoMuNcolOoL">
+                \(\dfrac{L}{0} = \infty\)
+                <br>
+                <br>
+                Quante volte un numero positivo vicinissimo a \(0\) è contenuto in un numero \(L\)?
+                Tantissime. Al limite, infinite.
+            </div>
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-buttonoMuNcolOoL" onclick="previousSlide(`oMuNcolOoL`)">Indietro</button>
+            <button onclick="toggleFullscreen('oMuNcolOoL')">⛶</button>
+            <button id="nextSlide-buttonoMuNcolOoL" onclick="nextSlide(`oMuNcolOoL`)">Avanti</button>
+        </div>
+
+        <br>
+        <br>
+
+        Rissumendo,
+
+        <div class="grayBackground">
+            Le seguenti <b>forme</b> sono <b>determinate</b>
+            \[
+            \begin{align*}
+            \dfrac{L}{\infty} = 0 \qquad &\dfrac{0}{\infty} = 0 \qquad \dfrac{0}{L} = 0
+            \\\\
+            \dfrac{\infty}{L} = \infty \qquad &\dfrac{\infty}{0} = \infty \qquad \dfrac{L}{0} = \infty
+            \end{align*}
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <h3 class="yellow">Tecnica dei termini dominanti</h3>
+    <div class="esempi-container">
+        Consideriamo il polinomio
+        \[
+        p(x) = 3x^2 + 2x + 1
+        \]
+        quando calcoliamo il limite
+        \[
+        \lim_{x \to +\infty} \, 3x^2 + 2x + 1
+        \]
+        possiamo immaginare che la \(x\) assuma valore spaventosamente grande. Nella seguente tabella
+        vediamo un confronto tra i termini \(\,\,3x^2\,\,\) e \(\,\,2x + 1\,\,\) che compongono il polinomio.
+
+        <br>
+        <br>
+        <div style="overflow-x: scroll;">
+            <table>
+                <tr>
+                    <th>
+                        \(x\)
+                    </th>
+                    <th>
+                        \(3x^2\)
+                    </th>
+                    <th>
+                        \(2x +1\)
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        \(100\)
+                    </td>
+                    <td>
+                        \(30000\)
+                    </td>
+                    <td>
+                        \(201\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(1000\)
+                    </td>
+                    <td>
+                        \(3000000\)
+                    </td>
+                    <td>
+                        \(2001\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(1\,000\,000\)
+                    </td>
+                    <td>
+                        \(3\,000\,000\,000\,000\)
+                    </td>
+                    <td>
+                        \(2\,000\,001\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(1\,000\,000\,000\)
+                    </td>
+                    <td>
+                        \(3\,000\,000\,000\,000\,000\,000\)
+                    </td>
+                    <td>
+                        \(2\,000\,000\,001\)
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+
+        Osserviamo che il divario tra i termini \(3x^2\) e \(2x + 1\) cresce in maniera
+        vertiginosa pian piano che aumentiamo il valore di \(x\).
+        <br>
+        In linguaggio tecnico, diremo che il termine
+        \(2x +1\) assume valori <b>trascurabili</b> rispetto a quelli assunti da \(3x^2\).
+        <br>
+        In altre parole per valori estremamente grandi dell'input \(x\) il polinomio \(3x^2 + 2x + 1\)
+        può essere approssimato con il monomio \(3x^2\).
+        Data questa osservazione, possiamo scrivere
+        \[
+        \lim_{x \to +\infty} \, 3x^2 + 2x + 1 = \lim_{x \to +\infty} \, 3x^2
+        \]
+        Diremo che il monomio \(3x^2\) è il <b>terminine dominante</b> del polinomio \(3x^2 + 2x + 1\).
+        <br>
+        <br>
+        In generale
+        <div class="grayBackground">
+            Il <b>termine dominante</b> di un polinomio per \(x \to \infty\) è il monomio con esponente maggiore.
+        </div>
+
+        <br>
+        Facciamo un esempio.
+
+        <br>
+        <br>
+
+        <b class="gray">Esempio</b>
+        <br>
+        <div class="grayBorder">
+            Il termine dominante del polinomio
+            \[
+            5x^2 -3x^6 + 5x^3 + 3
+            \]
+            è \(-3x^6\). Di conseguenza
+            \[
+            \lim_{x \to +\infty} \, 5x^2 -3x^6 + 5x^3 + 3 = \lim_{x \to +\infty} \, -3x^6
+            \]
+
+            <br>
+            <br>
+            <hr>
+            <br>
+            <br>
+
+            Il termine dominante del polinomio
+            \[
+            2x^2 - x + 1
+            \]
+            è \(2x^2\). Di conseguenza
+            \[
+            \lim_{x \to +\infty} \, 2x^2 - x + 1 = \lim_{x \to +\infty} \, 2x^2 \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <h3 class="yellow">Forme indeterminate</h3>
+    <div class="esempi-container">
+        Analizziamo i seguenti tre limiti. Proviamo a svolgerli
+        per sostituzione.
+        <br>
+        <br>
+
+        <div style="font-size: 1rem;">
+            \(
+            \displaystyle
+            \lim_{x \to +\infty} \dfrac{x^2 + x + 1}{x - 1}
+            = \dfrac{(+\infty)^2 +\infty + 1}{+\infty - 1} =
+            = \color{red}{}\dfrac{+\infty}{+\infty}
+            \)
+        </div>
+        <br>
+        <br>
+        <div style="font-size: 1rem;">
+            \(
+            \displaystyle
+            \lim_{x \to +\infty} \dfrac{x^2 + 1}{x^3 + 3}
+            = \dfrac{(+\infty)^2 + 1}{(+\infty)^3 + 3}
+            = \color{red}{}\dfrac{+\infty}{+\infty}
+            \)
+        </div>
+        <br>
+        <br>
+        <div style="font-size: 1rem;">
+            \(
+            \displaystyle
+            \lim_{x \to +\infty} \dfrac{x^2 + x + 1}{x^2 + 5}
+            = \dfrac{3\cdot(+\infty)^2 +\infty + 1}{(+\infty)^2 + 5}
+            = \color{red}{}\dfrac{+\infty}{+\infty}
+            \)
+        </div>
+
+
+        <br>
+        <br>
+
+
+        Tutti e tre danno luogo alla forma
+        \[
+        \dfrac{\infty}{\infty}
+        \]
+        che come vedremo è <b>indeterminata</b>.
+        Infatti, se applichiamo la tecnica dei termini dominanti per risolverli, otteniamo tre risultati differenti.
+
+        <br>
+        <br>
+
+        <div style="font-size: 1rem;">
+            \(
+            \displaystyle
+            \lim_{x \to +\infty} \dfrac{x^2 + x + 1}{x - 1}
+            = \lim_{x \to +\infty} \dfrac{x^2}{x}
+            = \lim_{x \to +\infty} x
+            = \color{red}{}+\infty
+            \)
+        </div>
+        <br>
+        <br>
+        <div style="font-size: 1rem;">
+            \(
+            \displaystyle
+            \lim_{x \to +\infty} \dfrac{x^2 + 1}{x^3 + 3} = \lim_{x \to +\infty} \dfrac{x^2}{x^3} = \lim_{x \to +\infty}
+            \dfrac{1}{x} = \color{red}{}0
+            \)
+        </div>
+        <br>
+        <br>
+        <div style="font-size: 1rem;">
+            \(\displaystyle
+            \lim_{x \to +\infty} \dfrac{x^2 + x + 1}{x^2 + 5} = \lim_{x \to +\infty} \dfrac{x^2}{x^2} = \color{red}{}1
+            \)
+        </div>
+
+        <br>
+        <br>
+
+        In conclusione 
+
+        <br>
+        <br>
+
+        <div class="grayBackground">
+            La forma \(\dfrac{\infty}{\infty}\) si dice <b>forma indeterminata</b>, perché il suo risultato 
+            varia da situazione a situazione.
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to +\infty} \dfrac{e^{-x} + 2}{ln(x^2 - 3x + 1)}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            \[
+            \lim_{x \to +\infty} \dfrac{e^{-x} + 2}{ln(x^2 - 3x + 1)} = 0
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to +\infty} \dfrac{5x^3 + \sqrt{3x^5 - 3x + 1}}{5x^2 - 8x + 10}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Soluzione</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            \[
+            \lim_{x \to +\infty} \dfrac{5x^3 + \sqrt{3x^5 - 3x + 1}}{5x^2 - 8x + 10} = +\infty
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to 2^{+}} \dfrac{9x - 1}{1 - e^{5x - 10}}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(3)-button" onclick="showHint(`AAAAAAA(3)`)">Soluzione</button>
+        <div id="hintAAAAAAA(3)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            \[
+            \lim_{x \to 2^{+}} \dfrac{9x - 1}{1 - e^{5x - 10}} = +\infty
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Consideriamo \(f(x) = \dfrac{e^{x} - 1}{ln\left(x^2\right)}\)
+        Stabilire se è vero che
+        \[
+        \lim_{x \to 0^{-}} f(x) = \lim_{x \to 0^{+}} f(x)
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(4)-button" onclick="showHint(`AAAAAAA(4)`)">Soluzione</button>
+        <div id="hintAAAAAAA(4)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            Si, perché si ha che
+            \[
+            \lim_{x \to 0^{-}} \,\, \dfrac{e^{x} - 1}{ln\left(x^2\right)} =
+            \lim_{x \to 0^{+}} \,\, \dfrac{e^{x} - 1}{ln\left(x^2\right)} = 0
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Studiare <b>dominio</b>, <b>segno</b> e <b>comportamento agli estremi del dominio</b> della funzione
+        \[
+        f(x) = \dfrac{x^2 -1}{x}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(5)-button" onclick="showHint(`AAAAAAA(5)`)">Soluzione</button>
+        <div id="hintAAAAAAA(5)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            Il <b>dominio</b> della funzione è
+            \[
+            D = (-\infty\,,\,\,0) \cup (0\,,\,\,+\infty)
+            \]
+            Il <b>segno</b> della funzione varia in questo modo:
+            <br>
+            <br>
+            <ul>
+                <li>
+                    \(f(x) \gt 0\,\,\) per \(\,\,x \in (-1\,,\,\,0) \cup (1\,,\,\,+\infty)\)
+                </li>
+                <br>
+                <li>
+                    \(f(x) \gt 0\,\,\) per \(\,\,x \in (-\infty\,,\,\,-1) \cup (0\,,\,\,1)\)
+                </li>
+                <br>
+                <li>
+                    \(f(x) = 0\,\,\) per \(\,\,x = \pm1\)
+                </li>
+            </ul>
+            <br>
+            <br>
+            Il <b>comportamento agli estremi del dominio</b> è il seguente:
+            \[
+            \begin{align*}
+            &\lim_{x \to -\infty} f(x) = -\infty
+            \\\\
+            &\lim_{x \to 0^{-}} f(x) = +\infty
+            \\\\
+            &\lim_{x \to +\infty} f(x) = -\infty
+            \\\\
+            &\lim_{x \to 0^{+}} f(x) = +\infty
+            \end{align*}
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+</body>
