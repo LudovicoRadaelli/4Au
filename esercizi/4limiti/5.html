@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="yellow">Gerarchia degli infiniti</h3>
+    <div class="esempi-container">
+        La tecnica dei termini dominanti può essere estesa ad altre funzioni.
+        <br>
+        <br>
+        <ul>
+            <li>
+                Se considerata per valori della \(x\) sempre più grandi, una qualsiasi funzione logartimica con base
+                maggiore di \(1\) assume
+                valori trascurabili rispetto ad una potenza di \(x\) con esponente positivo.
+                In simboli scriveremo
+                \[
+                log_c(x) \,\,\prec\,\, x^{a}
+                \]
+                con \(\,\,c \gt 0 \,\,\) e \(\,\,a \gt 0\).
+            </li>
+            <br>
+            <li>
+                Allo stesso modo, se considerata per valore della \(x\) sempre più grandi, una qualsiasi potenza di
+                \(x\) con esponente positivo assume valori trascurabili
+                rispetto ad una funzione esponenziale con base maggiore di \(1\).
+                \[
+                x^{a} \,\,\prec\,\, b^{x}
+                \]
+                con \(\,\,a \gt 0\,\,\) e \(\,\,b \gt 1\).
+
+            </li>
+        </ul>
+        <br>
+        <br>
+        Unendo queste due informazioni, possiamo riassumere che
+
+        <br>
+        <br>
+
+        <div class="grayBackground">
+            \[
+            log_c(x) \,\,\prec\,\, x^{a} \,\,\prec\,\, b^{x}
+            \]
+            con \(\,\,c \gt 1\), \(\,\,a \gt 0\,\,\) e \(\,\,b \gt 1\).
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to +\infty} \dfrac{3x^3 - e^{x} + 1}{7x^2 - 2ln(x) + 4}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            \[
+            \lim_{x \to +\infty} \dfrac{3x^3 - e^{x} + 1}{7x^2 - 2ln(x) + 4} = -\infty
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to +\infty} \dfrac{3x + \sqrt{ln(x)} + 3ln(x)}{1 + 3x^{10} + x^{30} + 2^{x}}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Soluzione</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            \[
+            \lim_{x \to +\infty} \dfrac{3x + \sqrt{ln(x)} + 3ln(x)}{1 + 3x^{10} + x^{30} + 2^{x}} = 0
+            \]
+        </div>
+    </div>  
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+</body>
